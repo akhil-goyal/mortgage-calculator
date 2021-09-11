@@ -5,10 +5,26 @@ import { mount } from 'enzyme';
 // Components
 import Results from 'components/results/Results';
 
+//  Contexts
+import { calculatorValues } from 'contexts/calculator-context';
+
 let wrapped;
 
 beforeEach(() => {
-    wrapped = mount(<Results />);
+
+    const data = {
+        purchasingPrice: 100,
+        deposit: 10,
+        mortgageTerm: 2,
+        interestRate: 8,
+    }
+
+    wrapped = mount(
+        <calculatorValues.Provider value={data}>
+            <Results />
+        </calculatorValues.Provider>
+    );
+
 });
 
 afterEach(() => {
