@@ -1,0 +1,8 @@
+.header {
+  padding: 1em;
+  background-color: var(--primary-color);
+}
+
+.header h1 {
+  color: var(--light-color);
+}
