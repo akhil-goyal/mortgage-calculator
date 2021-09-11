@@ -36,11 +36,11 @@ const Results = () => {
 
     return (
         <>
-            <div className="results-title">
+            <div className="flex results-title">
                 <h2><u>RESULTS</u></h2>
             </div>
 
-            <div className="results">
+            <div className="grid-2 results center">
 
                 <div>
                     <h3><strong>${separateByComma(borrowingAmount.toFixed(2))}</strong></h3>
