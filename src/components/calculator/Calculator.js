@@ -31,7 +31,7 @@ const Calculator = () => {
         <>
 
             <div className="flex calculator-title">
-                <h2><u>Mortgage Variables</u></h2>
+                <h2><u>MORTGAGE VARIABLES</u></h2>
             </div>
 
             <div className="grid-2 sliders">

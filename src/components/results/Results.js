@@ -32,7 +32,7 @@ const Results = () => {
     return (
         <>
             <div className="results-title">
-                <h2><u>Results</u></h2>
+                <h2><u>RESULTS</u></h2>
             </div>
 
             <div className="results">
