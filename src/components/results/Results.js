@@ -38,32 +38,32 @@ const Results = () => {
             <div className="results">
 
                 <div>
-                    <h4><strong>${separateByComma(borrowingAmount)}</strong></h4>
+                    <h3><strong>${separateByComma(borrowingAmount)}</strong></h3>
                     <em>Amount to borrow</em>
                 </div>
 
                 <div>
-                    <h4><strong>${separateByComma(monthlyPayment.toFixed(2))}</strong></h4>
+                    <h3><strong>${separateByComma(monthlyPayment.toFixed(2))}</strong></h3>
                     <em>Monthly payment</em>
                 </div>
 
                 <div>
-                    <h4><strong>${separateByComma(totalRepaid.toFixed(2))}</strong></h4>
+                    <h3><strong>${separateByComma(totalRepaid.toFixed(2))}</strong></h3>
                     <em>Total Repaid</em>
                 </div>
 
                 <div>
-                    <h4><strong>${separateByComma(totalInterestPaid.toFixed(2))}</strong></h4>
+                    <h3><strong>${separateByComma(totalInterestPaid.toFixed(2))}</strong></h3>
                     <em>Total Interest Paid</em>
                 </div>
 
                 <div>
-                    <h4><strong>{depositPercentage.toFixed(2)}%</strong></h4>
+                    <h3><strong>{depositPercentage.toFixed(2)}%</strong></h3>
                     <em>Deposit</em>
                 </div>
 
                 <div>
-                    <h4><strong>{loanToValue.toFixed(2)}%</strong></h4>
+                    <h3><strong>{loanToValue.toFixed(2)}%</strong></h3>
                     <em>Loan to value</em>
                 </div>
 

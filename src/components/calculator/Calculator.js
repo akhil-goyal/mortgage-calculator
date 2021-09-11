@@ -37,7 +37,7 @@ const Calculator = () => {
             <div className="grid-2 sliders">
 
                 <div className="center">
-                    <h4>${separateByComma(purchasingPrice)}</h4>
+                    <h3>${separateByComma(purchasingPrice)}</h3>
                     <Slider
                         handleStyle={{ borderColor: siteColor }}
                         trackStyle={{ backgroundColor: siteColor }}
@@ -51,7 +51,7 @@ const Calculator = () => {
                 </div>
 
                 <div className="center">
-                    <h4>${separateByComma(deposit)}</h4>
+                    <h3>${separateByComma(deposit)}</h3>
                     <Slider
                         handleStyle={{ borderColor: siteColor }}
                         trackStyle={{ backgroundColor: siteColor }}
@@ -65,7 +65,7 @@ const Calculator = () => {
                 </div>
 
                 <div className="center">
-                    <h4>{mortgageTerm.toFixed(1)} years</h4>
+                    <h3>{mortgageTerm.toFixed(1)} years</h3>
                     <Slider
                         handleStyle={{ borderColor: siteColor }}
                         trackStyle={{ backgroundColor: siteColor }}
@@ -79,7 +79,7 @@ const Calculator = () => {
                 </div>
 
                 <div className="center">
-                    <h4>{interestRate.toFixed(2)}%</h4>
+                    <h3>{interestRate.toFixed(2)}%</h3>
                     <Slider
                         handleStyle={{ borderColor: siteColor }}
                         trackStyle={{ backgroundColor: siteColor }}

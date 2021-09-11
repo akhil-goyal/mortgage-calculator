@@ -8,15 +8,18 @@ import Calculator from 'components/calculator/Calculator';
 //  Contexts
 import { calculatorValues } from 'contexts/calculator-context';
 
+// Helper Functions
+import { defaultValues } from 'utils/static';
+
 let wrapped;
 
 beforeEach(() => {
 
     const data = {
-        purchasingPrice: 100,
-        deposit: 10,
-        mortgageTerm: 2,
-        interestRate: 8,
+        purchasingPrice: defaultValues.defaultPurchasingPrice,
+        deposit: defaultValues.defaultDeposit,
+        mortgageTerm: defaultValues.defaultMortgageTerm,
+        interestRate: defaultValues.defaultInterestRate,
     }
 
     wrapped = mount(
