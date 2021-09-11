@@ -7,10 +7,17 @@ import Header from 'components/header/Header';
 
 let wrapped;
 
+// beforeEach will execute before running
+// every test in this suite.
 beforeEach(() => {
     wrapped = mount(<Header />);
 });
 
+// afterEach will execute after running
+// every test in this suite. This will unmount
+// the component every time it is loaded for testing.
+// This will help in component clear up & improving
+// the speed of performing tests.
 afterEach(() => {
     wrapped.unmount();
 });

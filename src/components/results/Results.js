@@ -11,8 +11,10 @@ import { separateByComma } from 'utils/helpers/comma-separation';
 // Others
 import './results.css';
 
+
 const Results = () => {
 
+    // Getting current state values using the context.
     const {
         purchasingPrice,
         deposit,
@@ -20,6 +22,9 @@ const Results = () => {
         interestRate,
     } = useContext(calculatorValues);
 
+    // Passing arguments in function mortgageResult,
+    // Getting calculated results in return,
+    // Using destructuring to get the calculated values.
     const {
         borrowingAmount,
         monthlyPayment,
@@ -38,7 +43,7 @@ const Results = () => {
             <div className="results">
 
                 <div>
-                    <h3><strong>${separateByComma(borrowingAmount)}</strong></h3>
+                    <h3><strong>${separateByComma(borrowingAmount.toFixed(2))}</strong></h3>
                     <em>Amount to borrow</em>
                 </div>
 

@@ -10,6 +10,8 @@ import Results from 'components/results/Results';
 
 let wrapped;
 
+// beforeEach will execute before running
+// every test in this suite.
 beforeEach(() => {
     wrapped = shallow(<App />);
 });

@@ -16,6 +16,7 @@ const Calculator = () => {
 
     const { siteColor } = defaultValues;
 
+    // Getting current state values using the context.
     const {
         purchasingPrice,
         deposit,
@@ -37,7 +38,7 @@ const Calculator = () => {
             <div className="grid-2 sliders">
 
                 <div className="center">
-                    <h3>${separateByComma(purchasingPrice)}</h3>
+                    <h3>${separateByComma(purchasingPrice.toFixed(2))}</h3>
                     <Slider
                         handleStyle={{ borderColor: siteColor }}
                         trackStyle={{ backgroundColor: siteColor }}
@@ -51,7 +52,7 @@ const Calculator = () => {
                 </div>
 
                 <div className="center">
-                    <h3>${separateByComma(deposit)}</h3>
+                    <h3>${separateByComma(deposit.toFixed(2))}</h3>
                     <Slider
                         handleStyle={{ borderColor: siteColor }}
                         trackStyle={{ backgroundColor: siteColor }}

@@ -7,8 +7,10 @@ import { defaultValues } from 'utils/static';
 // Creating a new context.
 export const calculatorValues = createContext();
 
+
 const CalculatorContext = ({ children }) => {
 
+    // Destructuring values from defaultValues
     const {
         defaultPurchasingPrice,
         defaultDeposit,
@@ -22,6 +24,7 @@ const CalculatorContext = ({ children }) => {
     const [mortgageTerm, setMortgageTerm] = useState(defaultMortgageTerm);
     const [interestRate, setInterestRate] = useState(defaultInterestRate);
 
+    // Event Change Handlers
     const handlePurchasingPriceChange = e => {
         setPurchasingPrice(e)
     }
@@ -38,7 +41,7 @@ const CalculatorContext = ({ children }) => {
         setInterestRate(e)
     }
 
-    // Passing the states such that they may be used
+    // Passing the states as provider's value such that they may be used
     // by the children components that fall under the scope
     // of this provider.
     return (
