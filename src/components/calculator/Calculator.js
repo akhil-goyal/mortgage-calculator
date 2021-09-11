@@ -1,13 +1,27 @@
 // Packages
-import React from 'react';
+import React, { useContext } from 'react';
 import { Slider } from 'antd';
 
-// Files
-import './calculator.css'
+// Contexts
+import { calculatorValues } from 'contexts/calculator-context';
+
+// Others
+import './calculator.css';
 
 const Calculator = () => {
 
     const siteColor = '#073b07';
+
+    const {
+        purchasingPrice,
+        deposit,
+        mortgageTerm,
+        interestRate,
+        handlePurchasingPriceChange,
+        handleDepositChange,
+        handleMortgageTermChange,
+        handleInterestRateChange
+    } = useContext(calculatorValues);
 
     return (
         <>
@@ -19,11 +33,12 @@ const Calculator = () => {
             <div className="grid-2 sliders">
 
                 <div className="center">
-                    <h4>10000</h4>
+                    <h4>${purchasingPrice.toFixed(2)}</h4>
                     <Slider
                         handleStyle={{ borderColor: siteColor }}
                         trackStyle={{ backgroundColor: siteColor }}
-                        defaultValue={10000}
+                        onChange={handlePurchasingPriceChange}
+                        defaultValue={purchasingPrice}
                         min={0}
                         max={1000000}
                         step={500}
@@ -32,11 +47,12 @@ const Calculator = () => {
                 </div>
 
                 <div className="center">
-                    <h4>20000</h4>
+                    <h4>${deposit.toFixed(2)}</h4>
                     <Slider
                         handleStyle={{ borderColor: siteColor }}
                         trackStyle={{ backgroundColor: siteColor }}
-                        defaultValue={20000}
+                        onChange={handleDepositChange}
+                        defaultValue={deposit}
                         min={0}
                         max={300000}
                         step={500}
@@ -45,11 +61,12 @@ const Calculator = () => {
                 </div>
 
                 <div className="center">
-                    <h4>2</h4>
+                    <h4>{mortgageTerm.toFixed(1)} years</h4>
                     <Slider
                         handleStyle={{ borderColor: siteColor }}
                         trackStyle={{ backgroundColor: siteColor }}
-                        defaultValue={2}
+                        onChange={handleMortgageTermChange}
+                        defaultValue={mortgageTerm}
                         min={5}
                         max={40}
                         step={1}
@@ -58,11 +75,12 @@ const Calculator = () => {
                 </div>
 
                 <div className="center">
-                    <h4>2</h4>
+                    <h4>{interestRate.toFixed(2)}%</h4>
                     <Slider
                         handleStyle={{ borderColor: siteColor }}
                         trackStyle={{ backgroundColor: siteColor }}
-                        defaultValue={2}
+                        onChange={handleInterestRateChange}
+                        defaultValue={interestRate}
                         min={0.1}
                         max={10}
                         step={0.1}
