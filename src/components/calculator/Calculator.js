@@ -7,10 +7,11 @@ import { calculatorValues } from 'contexts/calculator-context';
 
 // Others
 import './calculator.css';
+import { defaultValues } from 'utils/static';
 
 const Calculator = () => {
 
-    const siteColor = '#073b07';
+    const { siteColor } = defaultValues;
 
     const {
         purchasingPrice,

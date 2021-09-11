@@ -1,15 +1,26 @@
+// Packages
 import React, { createContext, useState } from 'react';
+
+// Others
+import { defaultValues } from 'utils/static';
 
 // Creating a new context.
 export const calculatorValues = createContext();
 
 const CalculatorContext = ({ children }) => {
 
+    const {
+        defaultPurchasingPrice,
+        defaultDeposit,
+        defaultMortgageTerm,
+        defaultInterestRate
+    } = defaultValues;
+
     // Initial states.
-    const [purchasingPrice, setPurchasingPrice] = useState(200000);
-    const [deposit, setDeposit] = useState(50000);
-    const [mortgageTerm, setMortgageTerm] = useState(7);
-    const [interestRate, setInterestRate] = useState(2);
+    const [purchasingPrice, setPurchasingPrice] = useState(defaultPurchasingPrice);
+    const [deposit, setDeposit] = useState(defaultDeposit);
+    const [mortgageTerm, setMortgageTerm] = useState(defaultMortgageTerm);
+    const [interestRate, setInterestRate] = useState(defaultInterestRate);
 
     const handlePurchasingPriceChange = e => {
         setPurchasingPrice(e)
