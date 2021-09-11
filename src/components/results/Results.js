@@ -6,6 +6,7 @@ import { calculatorValues } from 'contexts/calculator-context';
 
 // Helper Functions
 import { mortgageResult } from 'utils/helpers/mortgage-calculation';
+import { separateByComma } from 'utils/helpers/comma-separation';
 
 // Others
 import './results.css';
@@ -37,22 +38,22 @@ const Results = () => {
             <div className="results">
 
                 <div>
-                    <h4><strong>${borrowingAmount.toFixed(2)}</strong></h4>
+                    <h4><strong>${separateByComma(borrowingAmount)}</strong></h4>
                     <em>Amount to borrow</em>
                 </div>
 
                 <div>
-                    <h4><strong>${monthlyPayment.toFixed(2)}</strong></h4>
+                    <h4><strong>${separateByComma(monthlyPayment.toFixed(2))}</strong></h4>
                     <em>Monthly payment</em>
                 </div>
 
                 <div>
-                    <h4><strong>${totalRepaid.toFixed(2)}</strong></h4>
+                    <h4><strong>${separateByComma(totalRepaid.toFixed(2))}</strong></h4>
                     <em>Total Repaid</em>
                 </div>
 
                 <div>
-                    <h4><strong>${totalInterestPaid.toFixed(2)}</strong></h4>
+                    <h4><strong>${separateByComma(totalInterestPaid.toFixed(2))}</strong></h4>
                     <em>Total Interest Paid</em>
                 </div>
 

@@ -5,9 +5,12 @@ import { Slider } from 'antd';
 // Contexts
 import { calculatorValues } from 'contexts/calculator-context';
 
+// Helper Functions
+import { defaultValues } from 'utils/static';
+import { separateByComma } from 'utils/helpers/comma-separation';
+
 // Others
 import './calculator.css';
-import { defaultValues } from 'utils/static';
 
 const Calculator = () => {
 
@@ -34,7 +37,7 @@ const Calculator = () => {
             <div className="grid-2 sliders">
 
                 <div className="center">
-                    <h4>${purchasingPrice.toFixed(2)}</h4>
+                    <h4>${separateByComma(purchasingPrice)}</h4>
                     <Slider
                         handleStyle={{ borderColor: siteColor }}
                         trackStyle={{ backgroundColor: siteColor }}
@@ -48,7 +51,7 @@ const Calculator = () => {
                 </div>
 
                 <div className="center">
-                    <h4>${deposit.toFixed(2)}</h4>
+                    <h4>${separateByComma(deposit)}</h4>
                     <Slider
                         handleStyle={{ borderColor: siteColor }}
                         trackStyle={{ backgroundColor: siteColor }}
